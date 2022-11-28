@@ -1,0 +1,3200 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+
+\usepackage {graphicx}
+\usepackage {longtable}
+\usepackage {indentfirst}
+\renewenvironment{center}{\par\centering}{\par}
+
+% Comentar linhas abaixo se não estiver usando pacote abntex
+% ou se o pacote ainda não foi instalado.
+% neste caso sugere-se usar citações no padrão apalike (lembra o da anbt).
+%\usepackage[alf ,abnt-etal-cite=2 , abnt-year-extra-label=yes , abnt-etal-list=0]{abntcite}
+%\usepackage {helvet}
+%\renewcommand {\familydefault}{\sfdefault}
+
+% Para uso de listagens de código
+\usepackage{color}
+\definecolor{azulclaro}{rgb}{0.6,1,1}%   rgb color model
+% Informa que vai usar o pacote listings, 
+% disponibilizado em /usr/share/texmf/doc/latex/styles/listings.dvi
+\usepackage{listings}
+\end_preamble
+\use_default_options false
+\master DocumentoMestre-Trabalho-ProgramacaoPratica.lyx
+\maintain_unincluded_children false
+\language brazilian
+\language_package auto
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style apalike
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\paperwidth 210mm
+\paperheight 297mm
+\leftmargin 30mm
+\topmargin 25mm
+\rightmargin 20mm
+\bottommargin 20mm
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lhead{
+\backslash
+thechapter
+\backslash
+space - Elaboração}  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Elaboração
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Elaboração
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Elaboração"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Depois da denição dos objetivos, da especicação do software e da montagem
+ dos primeiros diagramas de caso de uso, a etapa do projeto de engenharia
+ envolve a identicação e o estudo dos conceitos relacionados ao sistema
+ a ser desenvolvido, isto é, a análise de domínio e a identicação de pacotes.
+ Na elaboração fazemos uma análise dos requisitos, ajustando os requisitos
+ iniciais de forma a desenvolver um sistema útil e adequado, que atenda
+ às necessidades do usuário além de permitir seu reuso e futura extensão.
+\end_layout
+
+\begin_layout Section
+Análise de domínio
+\end_layout
+
+\begin_layout Standard
+As acumulações de petróleo possuem certa quantidade de energia, denominada
+ energia primária.
+ A grandeza dessa energia é determinada pelo volume e pela natureza dos
+ fluidos existentes na acumulação, bem como pelos níveis de pressão e de
+ temperatura reinantes no reservatório.
+ No processo de produção há uma dissipação da energia primária, causada
+ pela descompressão dos fluidos do reservatório e pelas resistências encontradas
+ por eles ao fluírem em direção aos poços de produção.
+ Essas resistências são devidas, ou associadas, às forças viscosas e capilares
+ presentes no meio poroso.
+ O consumo de energia primária reflete-se principalmente no decréscimo da
+ pressão do reservatório durante a sua vida produtiva, e consequente redução
+ da produtividade dos poços (ROSA ET AL., 2006).
+\end_layout
+
+\begin_layout Standard
+Há duas linhas gerais de ação para aprimorar os efeitos nocivos da dissipação
+ da energia primaria dos reservatórios de petróleo: Suplementando a com
+ energia secundária através da injeção ou reduzindo as resistências viscosas
+ e/ou capilares por meio de metodos especiais, como por exemplo o aquecimento
+ da jazida (ROSA ET AL., 2006).
+\end_layout
+
+\begin_layout Standard
+A quantidade de óleo que pode ser retirada de um reservatório unicamente
+ às expensas de suas energias naturais é chamada de recuperação primária.
+ Por outro lado, recuperação secundária é a quantidade adicional de óleo
+ obtida por suplementação da energia primária com energia secundária, artificial
+mente transferida para a jazida, ou por meios que tendem a tornar a energia
+ primária mais eficiente.
+ Os objetivos práticos básicos dos métodos de recuperação secundária são
+ o aumento da eficiência de recuperação e a aceleração da produção (ROSA
+ ET AL., 2006).De acordo com Coelho (1991) um processo de exploração e produção
+ de uma reserva de hidrocarbonetos, suas características petrofísicas, geológica
+s, geofísicas e geoquímicas são fundamentais de entendimento para a eficiente
+ recuperação.
+ A qualidade de um reservatório esta diretamente ligado ao ambiente deposicional
+ do mesmo, bem como aos processos diagenéticos que lhe deram origem.
+ 
+\end_layout
+
+\begin_layout Standard
+Em um projeto de injeção de fluidos a escolha do esquema de injeção - distribuiç
+ão dos poços de injeção e produção - é fundamental, pois o sucesso aumenta
+ à medida que certas linhas básicas de procedimento são adotadas ao se fazer
+ essa escolha.
+ Como o objetivo primordial da injeção é o aumento da recuperação de petróleo,
+ deve-se tentar produzir esse volume adicional desejado utilizando-se esquemas
+ em que os volumes de fluidos injetados sejam os menores possíveis.
+ Devem ser buscadas situações em que a maior quantidade de fluido injetado
+ permaneça no interior do reservatório, ou seja, a produção do fluido injetado
+ seja a menor possível.
+ As relações entre pressões e vazões e as relações destas últimas com o
+ tempo do projeto são da maior importância e, portanto, devem ser encaradas
+ como aspectos fundamentais a serem levados em conta no projeto.
+ Finalmente, devem ser observadas as características particulares do reservatóri
+o em estudo, tais como a existência de falhas, variações de permeabilidade,
+ estratificações, barreiras etc.
+ Além disso, o aspecto econômico é decisivo (ROSA ET AL., 2006).
+\end_layout
+
+\begin_layout Standard
+A teoria do avanço frontal é usada para calcular a vazão dos poços em esquemas
+ de injeção, e em algumas de suas simplificações assumem que o fluxo entre
+ os poços de injeção e produção é linear (todos os caminhos de fluxo são
+ linhas retas) e que 100% do volume do poro do reservatório é contatado
+ por água Injetada.
+ Embora este comportamento possa ser aproximado em alguns reservatórios
+ alongados, o fluxo linear ideal seria possível apenas se os fluidos pudessem
+ ser injetados e produzidos a partir de toda a seção transversal do reservatório
+, ao invés de ser através da área limitada de um poço.
+ Este problema é ainda mais complicado pelo fato da maioria dos campos serem
+ desenvolvidos e a injeção de água ser feita utilizando algum padrão regular
+ de poço (SMITH, COBB , 1997).
+\end_layout
+
+\begin_layout Standard
+Quando se trata de um reservatório heterogêneo as taxas energéticas de sedimenta
+ção influenciam diretamente na seleção dos grãos.
+ Em geral, ambientes de deposição com alta energia, geram reservatórios
+ com boas características permoporosas, visto que os grãos foram melhor
+ retrabalhados ao longo do curso até a compactação.
+ Um exemplo interessante são os reservatórios originados em paleo-deltas,
+ que são portadores da maior parte do óleo existente em reservatórios areníticos
+ no planeta, (COELHO, 1991).
+ Contudo, a taxa pode variar num mesmo ambiente, gerando reservatórios com
+ variações verticais de permeabilidade, ou reservatórios heterogêneos, que
+ ainda podem se dividir em dois grupos, aqueles que possuem camadas sem
+ cruzamento de fluxo.
+\end_layout
+
+\begin_layout Standard
+A heterogeneidade do reservatório provavelmente tem mais influência do que
+ qualquer outro fator no desempenho de uma injeção de fluido, ao passo que
+ se torna a variável mais difícil de determinar (SMITH, COBB, 1997).
+ É necessário entender como as variações de permeabilidade vertical e areal
+ podem ser determinadas, a fim de obter uma melhor previsão de desempenho
+ de eficiência do método de recuperação por injeção
+\end_layout
+
+\begin_layout Standard
+Neste trabalho serão discutidos conceitos de razão mobilidade, condutividade,
+ fluxo fracionário, esquemas de injeções em malhas, linhas de fluxo e de
+ pressão, a área invadida pela água, bem como a eficiência do varrido horizontal
+ e vertical em reservatórios homogêneos e heterogêneos 
+\end_layout
+
+\begin_layout Section
+Conceitos Fundamentais
+\end_layout
+
+\begin_layout Standard
+O conhecimento das propriedades das rochas e fuidos é essencial para o desenvolv
+imento de qualquer metodologia para aumentar o fator de recuperação do petróleo.
+ Assim, será mostrado denições de porosidade absoluta e relativa, molhabilidade,
+ permeabilidade absoluta, fator de recuperação, mobilidade, razão mobilodade,
+ entre outros.
+\end_layout
+
+\begin_layout Subsection
+Conceitos de Propriedades de Rochas e Fluidos
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Porosidade: 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+A porosidade de uma rocha é defnida como a razão entre o volume poroso,
+ capaz de armazenar fluidos, e o volume total da rocha, que é dado pela
+ soma do volume poroso e do volume da parte sólida da rocha.
+ A porosidade mede o volume dos espaços vazios em um meio poroso, independente
+ de estarem ou não interligados.
+ Portanto, a porosidade é um parâmetro petrofísico de grande importância
+ visto que se consegue medir a capacidade de armazenagem de fluidos em um
+ corpo poroso [Rosa et al., 2006].
+\end_layout
+
+\begin_layout Standard
+Assim, a porosidade (
+\begin_inset Formula $\phi$
+\end_inset
+
+), expresso em porcentagem, pode ser denida como a razão entre o volume
+ poroso (Vp) e o volume total (Vt) da amostra (Equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:porosidade"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ ), onde o volume total é dado pela soma do espaço poroso e da fase sólida
+ (Equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:volumeTotal"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\phi=\frac{V_{p}}{V_{t}}\label{eq:porosidade}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+V_{t}=V_{p}+V_{sólida}\label{eq:volumeTotal}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Conservação de Massas: 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+A equação da continuidade é desenvolvida efetuand-se um balanço de massas
+ sobre um elemento de volume 
+\begin_inset Formula $\Delta x\Delta y\Delta z,$
+\end_inset
+
+fixo no espaço, através do qual um fluido está escoando (Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:elementodemassa"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Pelo Princípio da Conservação das Massas, pode-se dizer que ao longo de
+ um determinado intervalo de tempo, a massa de água que entra num determinado
+ sistema subtraído da massa que sai, será igual ao acúmulo de massa dentro
+ do sistema.
+ (BIRD;LIFHFOOT, STEWART, 1987)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcos Chaiben/Documents/GitHub/Projeto-Software-Engenharia-C-_DJM/imagens/elementodevolume.jpeg
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Balanço de Massas (Autor)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:elementodemassa"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial(\rho_{j}S_{j}\phi)}{\partial t}=-\nabla\cdot\left(\rho_{j}\mathbf{u}\right)\label{eq:equacaoconcentracaoglobal}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sendo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\nabla\cdot\left(\rho\mathbf{u}\right)=\frac{\partial\left(\rho u_{x}\right)}{\partial x}+\frac{\partial\left(\rho u_{y}\right)}{\partial y}+\frac{\partial\left(\rho u_{z}\right)}{\partial z}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Equação de Buckey Levet
+\end_layout
+
+\begin_layout Standard
+Para definição da Equação de Buckey-Levett, vamos determinar as seguintes
+ premissas:
+\end_layout
+
+\begin_layout Itemize
+Fluxo 1D, horizontal, Isotérmico;
+\end_layout
+
+\begin_layout Itemize
+Meio Poroso Homogêneo e incompressível (porosidade e permeabilidade cte);
+\end_layout
+
+\begin_layout Itemize
+Fases imiscíveis, incompressíveis e viscosidade constante;
+\end_layout
+
+\begin_layout Itemize
+Sem reações químicas e adsorção;
+\end_layout
+
+\begin_layout Standard
+Obtêm-se:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{equation}
+\text{Equação de Buckey-Leverett: }\phi\frac{\partial(S_{j})}{\partial t}+\frac{\partial(u_{jx})}{\partial x}=0\label{eq:Equação de Buckey Leveret}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Molhabilidade: 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+O deslocamento de petróleo por meio dos poros da rocha reservatório também
+ é influenciado por outros parâmetros petrofísicos como a molhabilidade,
+ a qual pode ser definida como a capacidade de um fluido de se espalhar
+ em uma superfície sólida na presença de outros fluidos, ou seja, é a tendência
+ da superfície de ter mais afinidade por um fluido em detrimento de outro,
+ também presente no meio poroso.
+ Isto signica que em um fluxo.multifásico, um fludo tem mais anidade com
+ o meio poroso que outros uidos presentes [Rosa et al., 2006, Dandekar, 2013].
+ Desta forma, a molhabilidade quantifica a afinidade que a superfície da
+ rocha apresenta para cada fluido na presença de outros, estando relacionada
+ com as forças intermoleculares que atuam entre a superfície e as moléculas
+ dos líquidos presentes.
+ Em reservatórios de petróleo, encontram-se basicamente duas fases líquidas,
+ formadas pelo óleo e a água [Rosa et al., 2006].
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Permeabilidade:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+A permeabilidade é uma das características petrofísicas mais importantes
+ de um reservatório, sendo a capacidade da rocha de permitir o escoamento
+ de fluidos.
+ Uma rocha pode ter alta porosidade e apresentar baixa permeabilidade, caso
+ os poros não sejam bem conectados, ou seja, para que o reservatório seja
+ produtivo não basta um alto valor de porosidade, a rocha deve possuir a
+ capacidade de permitir o deslocamento de fluidos através dela [Rosa et
+ al., 2006].
+ 
+\end_layout
+
+\begin_layout Standard
+Este parâmetro é um dos que tem mais influência na determinação da capacidade
+ de produção de hidrocarbonetos acumulados.
+ A permeabilidade (k) é uma propriedade dinâmica, definida como a capacidade
+ de um dado meio poroso se deixar atravessar por um fluido [Rosa et al.,
+ 2006].
+ Ela é uma função da posição e pressão, e varia fortemente com o tamanho
+ dos poros e sua distribuição em determinado local [Lake et al., 1989].
+\end_layout
+
+\begin_layout Standard
+O conceito de permeabilidade aparece na lei que governa o deslocamento dos
+ fluidos através de meios porosos, conhecida como a Lei de Darcy, sendo
+ medida em milidarcy (md).
+ Existem dois tipos de permeabilidades, a permeabilidade absoluta, quando
+ o reservatório está saturado com um único fluido, e a permeabilidade efetiva,
+ quando existem dois ou mais fluidos coexistindo dentro de uma mesma rocha
+ [Albuquerque et al., 2007, Dandekar, 2013].
+ O desenvolvimento da expressão que permite encontrar a permeabilidade absoluta
+ de um meio poroso é utilizado até os dias atuais na indústria do petr óleo.
+ O experimento original de Darcy investigou o fluxo de água através da areia
+ e concluiu que um fluxo linear com vazão de injeção (q) é função da condutivida
+de hidráulica (k), da área da seção transversal (A), do diferencial de pressão
+ da entrada para a saída (
+\begin_inset Formula $\triangle P$
+\end_inset
+
+) e do comprimento do meio poroso (L), conforme mostra a Equação [Rosa et
+ al., 2006, Lake et al., 1989].
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q=\frac{kA\triangle P}{\mu L}\label{eq:lei-darcy}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A permeabilidade absoluta pode ser calculada isolando k na equação de Darcy
+ conforme Equação
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:k"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k=\frac{q\mu L}{A\triangle P}\label{eq:k}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sendo:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k$
+\end_inset
+
+ = Permeabilidade 
+\end_layout
+
+\begin_layout Itemize
+A = Área da seção transversal
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mu$
+\end_inset
+
+ = Viscosidade
+\end_layout
+
+\begin_layout Itemize
+L = Comprimento do meio poroso
+\end_layout
+
+\begin_layout Standard
+Desta forma, durante um fluxo, se todas as variáveis são conhecidas, menos
+ a permeabilidade, torna-se possível encontrá-la.
+ A forma para a Equação 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:k"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ é utilizada para um fluxo linear.
+ Em poços, com fluxo radial, modifica-se a geometria para definir a permeabilida
+de levando em consideração o raio externo do reservatório, o raio do poço,
+ a pressão externa do reservatório, e a pressão medida no poço em uma determinad
+a altura do reservatório, como será visto na fundamentação teórica dos métodos
+ utilizados neste trabalho [Rosa et al., 2006].
+ A permeabilidade efetiva (ke), quando dois ou mais fluidos saturam o meio
+ poroso [Rosa et al., 2006], sempre apresentará valores menores do que o
+ valor da permeabilidade absoluta da rocha.
+ O cálculo das permeabilidades efetivas à água e ao óleo (kw e ko) também
+ pode ser realizado usando a Lei de Darcy conforme Equações 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:krw"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:kro"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ [Rosa et al., 2006].
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k_{rw}=\frac{k_{w}Lq_{w}}{A\triangle P}\label{eq:krw}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k_{ro}=\frac{k_{o}Lq_{o}}{A\triangle P}\label{eq:kro}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A razão entre a permeabilidade efetiva de determinado uido no meio poroso
+ e a permeabilidade absoluta é denominada permeabilidade relativa (kr),
+ a qual pode ser representada pelas Equações 3.9 e 3.10 para um sistema bifásico
+ óleo-água.
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{equation}
+k_{rw}=\frac{k_{w}}{k}\label{eq:krw/k}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{equation}
+k_{ro}=\frac{k_{o}}{k}\label{eq:kro/k}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este parâmetro sofre efeitos da variação da saturação dos fluidos, da molhabilid
+ade da rocha, da estrutura dos poros da rocha, da tensão de confinamento,
+ do teor de argila da rocha, da migração de finos, da temperatura, além
+ das variações de tensão interfacial, viscosidade e velocidade do fluxo
+ [Dandekar, 2013].
+ 
+\end_layout
+
+\begin_layout Standard
+O aumento da saturação de um fluido molhante no meio poroso em relação a
+ outro fluido chama-se de embebição, e, por outro lado, quando existe uma
+ redução de saturação do fluido que molha preferencialmente a rocha em relação
+ a outro fluido, tem-se uma drenagem [Donaldson et al., 1985].
+ Assim, no processo de embebição, é necessário que haja uma determinada
+ saturação da fase molhante no inicio do fluxo, chamada saturação de água
+ conata ou saturação irredutível (Swi).
+ Da mesma forma ocorre no processo de drenagem, e essa saturação é denominada
+ saturação de óleo residual (Sor).
+ A saturação da fase não molhante atinge seu valor máximo a saturações menores
+ que 100%, o que indica que nem todo o meio poroso interligado irá contribuir
+ ao uxo desta fase [Núñez, 2011].
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Mobilidade e Razão Mobilidade:
+\end_layout
+
+\begin_layout Standard
+Na lei de Darcy, há um fator de proporcionalidade relacionado à velocidade
+ de um fluido e ao gradiente de pressão.
+ Este fator de proporcionalidade, denominado mobilidade do fluido, é a permeabil
+idade efetiva da rocha à esse fluido, dividida pela viscosidade do mesmo
+ (CRAIG, F.F.,1971).
+ 
+\end_layout
+
+\begin_layout Standard
+Se três fluidos (óleo, água e gás) estiverem presentes no meio poroso as
+ suas mobilidades serão definidas, respectivamente, por: 
+\begin_inset Formula 
+\begin{equation}
+\lambda_{w}=\frac{k_{w}}{\mu_{w}},\label{eq:1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\lambda_{o}=\frac{k_{o}}{\mu_{o}},\label{eq:2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\lambda_{g}=\frac{k_{g}}{\mu_{g}},\label{eq:3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Muskat (1937) discutiu pela primeira vez o termo que ficou conhecido como
+ razão de mobilidade.
+ Posteriormente, foi usado para relacionar a mobilidade da água na porção
+ de uma injeção no contato água com a mobilidade do óleo no banco de óleo.
+ Ele apresentou as distribuições de pressão em regime permanente para uma
+ série de arranjos de poços de produção de injeção, isto é, sob condições
+ de uma razão de mobilidade unitária.
+ A razão de mobilidades (M) é a relação entre a mobilidade do fluido deslocante
+ 
+\begin_inset Formula $(\lambda_{d}$
+\end_inset
+
+) atrás da frente de avanço do mesmo e a mobilidade do fluido deslocado
+ no banco deste fluido.
+ Por exemplo, no caso do fluido deslocado ser o óleo a razão de mobilidades
+ é dada por : 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+M=\frac{k_{d}}{\mu_{d}}\frac{\mu_{o}}{k_{o}}=\frac{\lambda_{d}}{\lambda_{o}},\label{eq:3.1}
+\end{equation}
+
+\end_inset
+
+ onde o subscrito 
+\begin_inset Formula $d$
+\end_inset
+
+ denota a fase de deslocamento.
+ Na terminologia de injeção de água, isso se torna,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+M=\frac{k_{w}}{\mu_{w}}\frac{\mu_{o}}{k_{o}}=\frac{k_{w}}{\mu_{w}}\frac{\mu_{o}}{k_{ro}},\label{eq:3.2}
+\end{equation}
+
+\end_inset
+
+ como a permeabilidade efetiva é função da saturação, a mobilidade também
+ é.
+\end_layout
+
+\begin_layout Standard
+É importante notar que as permeabilidades relativas à água e óleo na Eq.
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:3.2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ são definidas em dois pontos separados no reservatório, ou seja, 
+\begin_inset Formula $k_{w}$
+\end_inset
+
+ é a permeabilidade relativa à água na parte do reservatório em contato
+ com a água (na parte invadida pela água) e 
+\begin_inset Formula $k_{o}$
+\end_inset
+
+ é a permeabilidade relativa ao óleo no banco de óleo (parte não invadida
+ do reservatório) (COBB; SMITH, 1997).
+\end_layout
+
+\begin_layout Subsection
+Conceitos Teóricos: 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Fluxo Fracionário:
+\end_layout
+
+\begin_layout Standard
+O fluxo fracionário de um fluido é interpretado como o quociente entre a
+ taxa de fluxo desse fluido e a taxa total de fluxo.
+ Assim, o fluxo fracionário da água, 
+\begin_inset Formula $f_{w}$
+\end_inset
+
+, do óleo, 
+\begin_inset Formula $f_{o}$
+\end_inset
+
+e o total, 
+\begin_inset Formula $f_{t}$
+\end_inset
+
+são definidos, respectivamente, pelas Equações 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fluxofracionarioagua"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ , 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fluxofracionariooleo"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:fluxofracionariototal"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ (ROSA, 2006).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f_{w}=\frac{u_{w}}{ut}\label{eq:fluxofracionarioagua}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f_{o}=\frac{u_{o}}{ut}\label{eq:fluxofracionariooleo}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f_{t}=f_{w}+f_{o}\label{eq:fluxofracionariototal}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Eficiência do Varrido Vertical (
+\begin_inset Formula $Ev$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+Definida pela razão entre o volume invadido pela água e o volume total da
+ malha: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Ev=\frac{Volume.invadido.pela.água}{Volume.total.da.malha}\label{eq:EVV}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como a própria definição mostrou, quantifica o volume invadido pela água
+ injetada no reservatório, sendo significativamente afetada pela estratificação
+ devido ao movimento preferencial de fluidos nas zonas mais permeáveis.
+ Sofre ainda influência de outros parâmetros como razão de mobilidade, fluxo
+ entre camadas, força da gravidade e forças capilares.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Eficiência do Varrido Horizontal (
+\begin_inset Formula $Ev$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+Em qualquer projeto, independentemente do esquema escolhido, existe uma
+ área total definida que está sujeita à influência da injeção.
+ Por exemplo, em um esquema “five-spot” essa área total é a área da malha
+ base, ou seja, um quadrado.
+ Já no modelo “seven-spot” essa área é um hexágono.
+ Em um reservatório como o da Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Injeção-Periférica"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ a área total pode ser vista em planta, delimitada pelo contato óleo/água.
+ Observe que esta área é sempre medida em planta (ROSA ET AL., 2006).
+\end_layout
+
+\begin_layout Standard
+Se não existissem fatores que interferem no desempenho do processo e se
+ o tempo de atuação fosse infinito, a área da malha ou do reservatório seria
+ integralmente varrida pelo fluido injetado, e a recuperação de petróleo
+ seria proveniente de toda essa área.
+ Em projetos reais, devem ser efetuados cálculos para estimar que percentuais
+ dessa área total foram invadidos em diferentes tempos e diferentes condições,
+ uma vez que o fluido injetado invade apenas uma parte da área total (ROSA
+ ET AL., 2006).
+\end_layout
+
+\begin_layout Standard
+Define-se eficiência de varrido horizontal, 
+\begin_inset Formula $E_{A}$
+\end_inset
+
+, como a relação entre a área invadida pelo fluido injetado e a área total
+ do meio poroso, ambas medidas em planta.
+ Assim:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E_{A}=A_{inv}/A_{t}\label{eq:Ea}
+\end{equation}
+
+\end_inset
+
+onde 
+\begin_inset Formula $A_{inv}$
+\end_inset
+
+ é a área invadida pelo fluido e 
+\begin_inset Formula $A_{t}$
+\end_inset
+
+ a área total.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Campo potencial e linhas de fluxo
+\end_layout
+
+\begin_layout Standard
+Para cada distribuição de poços de injeção e de produção que se implanta
+ em um reservatório, e a cada instante, existe um campo potencial que é
+ resultado não só das posições desses poços como também das suas vazões
+ e pressões.
+ Para uma formação horizontal e de pequena espessura, o potencial pode ser
+ substituído pela pressão (ROSA ET AL., 2006).
+\end_layout
+
+\begin_layout Standard
+Os pontos de maior potencial são os poços de injeção e os de menor potencial
+ são os poços de produção, e entre esses pontos existem valores intermediários
+ espalhados por todo o reservatório.
+ Esse campo potencial pode ser representado em planta por meio de linhas
+ equipotenciais.
+ No caso de um único poço situado no centro de um reservatório cilíndrico,
+ por exemplo, as linhas equipotenciais são circunferências que têm o poço
+ como centro como mostrado a Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Linhas-potenciais-situadas"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ (ROSA ET AL., 2006).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcos Chaiben/Documents/GitHub/Projeto-Software-Engenharia-C-_DJM/imagens/fig23.png
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Linhas equipotenciais concêntricas em um reservatório infinito.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Linhas-potenciais-situadas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Perpendiculares às linhas equipotenciais se localizam as linhas de fluxo,
+ que começam nos poços de injeção e se estendem até os poços de produção.
+ Como o próprio nome já indica, o fluxo ocorre ao longo dessas linhas.
+ Se o sistema está em regime permanente, tanto o campo potencial como a
+ localização das linhas de fluxo não se alteram com o tempo.
+\end_layout
+
+\begin_layout Standard
+A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Linhas-de-Fluxo"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ apresenta uma malha de injeção em linha direta com algumas das suas linhas
+ de fluxo.
+ Nas vizinhanças dos poços as equipotenciais são circunferências concêntricas
+ aos mesmos.
+ Como as linhas de fluxo são perpendiculares às equipotenciais, nessas regiões
+ o fluxo é radial (ROSA ET AL., 2006).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcos Chaiben/Documents/GitHub/Projeto-Software-Engenharia-C-_DJM/imagens/fig16.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Linhas de Fluxo (ROSA ET AL., 2006).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Linhas-de-Fluxo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Como pode ser observado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Linhas-de-Fluxo"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, as linhas de fluxo entre dois poços têm comprimentos diferentes.
+ Como a diferença de pressão entre o poço de injeção e o de produção é a
+ mesma ao longo de qualquer linha, cada uma tem um gradiente médio de pressão
+ diferente.
+ As linhas de menor comprimento são as de maior gradiente médio (ROSA ET
+ AL., 2006).
+\end_layout
+
+\begin_layout Standard
+Ao penetrarem no meio poroso, as partículas de fluido que se deslocarem
+ ao longo da linha de fluxo mais curta terão maior velocidade que as partículas
+ que percorrerem outras linhas quaisquer.
+ Isso quer dizer que em um determinado instante cada linha de fluxo terá
+ sido varrida de uma maneira diferente das outras.
+ Deve ser observado que a velocidade varia não só de uma linha para outra
+ como ao longo da própria linha.
+ A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Evolução-da-área"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ mostra como o fluido injetado penetra no meio poroso e a forma que a região
+ invadida vai tomando em função das diferenças de gradiente médio de pressão
+ entre as linhas de fluxo (ROSA ET AL., 2006).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcos Chaiben/Documents/GitHub/Projeto-Software-Engenharia-C-_DJM/imagens/fig17.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Evolução da área invadida em uma malha em linha direta (ROSA ET AL., 2006).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Evolução-da-área"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Inicialmente o fluido injetado se propaga radialmente porque nas proximidades
+ do poço de injeção o gradiente de pressão em todas as linhas é praticamente
+ o mesmo.
+ Quando vista em planta, a área invadida pelo fluido tem uma forma também
+ praticamente circular.
+ À medida que o fluido avança em cada linha, como o seu gradiente de pressão
+ vai se alterando, a sua velocidade também vai se alterando, de tal maneira
+ que a região invadida, que inicialmente era circular, vai adquirindo outra
+ forma.
+ No instante em que a primeira partícula do fluido injetado alcança o poço
+ de produção, teoricamente só a linha de fluxo mais curta foi inteiramente
+ varrida, restando partes do reservatório que ainda não foram contatadas.
+ A região invadida pelo fluido injetado vai se alterando não só em forma
+ como também em dimensão, à medida que mais e mais fluido vai penetrando
+ no meio poroso (ROSA ET AL., 2006).
+\end_layout
+
+\begin_layout Standard
+Conforme será discutido na próxima seção, usando as expressões analíticas
+ que descrevem o comportamento da pressão em reservatórios homogêneos infinitos
+ é possível estimar a área de varrido, bem como a distribuição de pressão
+ e o comportamento das linhas de fluxo, em reservatórios submetidos à injeção
+ de água (ROSA ET AL., 2006).
+\end_layout
+
+\begin_layout Standard
+A dimensão da área invadida e, consequentemente, a eficiência de varrido
+ horizontal dependem da geometria de injeção, do volume de fluido injetado
+ e da razão entre a mobilidade do fluido injetado e a mobilidade do fluido
+ deslocado.
+ Para se entender um pouco mais sobre a formação dessas áreas invadidas
+ é necessário um pequeno estudo a respeito de campos potenciais e linhas
+ de fluxo, que será mostrado a seguir (ROSA ET AL., 2006).
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Modelo de Corey-Brooks:
+\end_layout
+
+\begin_layout Standard
+A Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Modelo Corey-Brooks"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ mostra os valores de permeabilidade relativa para todo o intervalo de valores
+ de saturação de água.
+ É possível observar que à medida que a saturação de água diminui, a sua
+ permeabilidade efetiva cai de forma sensível no início.
+ Considerando que o meio poroso em estudo é molhável a água, essa situação
+ já era esperada, visto que o óleo irá ocupar inicialmente uma região de
+ maior diâmetro no centro dos capilares.
+ A tendência natural é que a saturação de óleo cresça até atingir a saturação
+ crítica e começar a fluir e em consequência, a saturação de água começará
+ a diminuir de forma mais significativa(Rosa et al, 2016).
+\end_layout
+
+\begin_layout Standard
+O crescimento da saturação de óleo é diretamente proporcional ao da sua
+ permeabilidade relativa.
+ Enquanto isso, a permeabilidade relativa da água descrece até que seja
+ atingido o ponto de saturação irredutível de água(
+\begin_inset Formula $S_{wi}$
+\end_inset
+
+), em que ela parará de fluir , logo , sua permeabilidade relativa será
+ nula.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcos Chaiben/Documents/GitHub/Projeto-Software-Engenharia-C-_DJM/imagens/Modelo de Corey-Brooks -Permeabilidade Rel.png
+	lyxscale 50
+	width 15cm
+	height 15cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Modelo de Corey-Brooks para permeabilidade relativa(Autor).
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "Modelo Corey-Brooks"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A partir do modelo de Corey-Brooks para permeabilidade relativa e pressão
+ capilar, temos as seguintes relações:
+\begin_inset Formula 
+\begin{equation}
+k_{rw}(S_{w})=(k_{rw})_{s_{orw}}\left(\frac{S_{w}-S_{wi}}{1-S_{wi}-S_{orw}}\right)^{ew}\label{eq:permeabilidade relativa agua}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k_{ro}(S_{w})=(k_{ro})_{s_{wi}}\left(\frac{1-S_{w}-S_{orw}}{1-S_{wi}-S_{orw}}\right)^{eow}\label{eq:permeabilidade relativa oleo}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{c}(S_{w})=(P_{c})_{s_{wi}}\left(\frac{1-S_{w}-S_{orw}}{1-S_{wi}-S_{orw}}\right)^{epcow}\label{eq:pressao capilar}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sendo 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $k_{rw}=$
+\end_inset
+
+permeabilidade relativa na água, 
+\begin_inset Formula $k_{ro}=$
+\end_inset
+
+permeabilidade relativa na óleo, 
+\begin_inset Formula $(k_{rw})_{s_{orw}}=$
+\end_inset
+
+permeabilidade relativa na água na saturação de óleo residual , 
+\begin_inset Formula $(k_{rw})_{s_{wi}}=$
+\end_inset
+
+permeabilidade relativa da água na saturação de agua irredutivel , 
+\begin_inset Formula $S_{w}=$
+\end_inset
+
+Saturação de água, 
+\begin_inset Formula $S_{wi}=$
+\end_inset
+
+Saturação de água irredutível, 
+\begin_inset Formula $S_{orw}=$
+\end_inset
+
+Saturação de óleo residual , 
+\begin_inset Formula $P_{c}=$
+\end_inset
+
+pressão capilar , ew,eow e epcow= constantes experimentais de Corey-Brooks
+ .
+ 
+\end_layout
+
+\begin_layout Section
+Formulações Matemáticas
+\end_layout
+
+\begin_layout Subsection
+Modelo de Fluxo Bifásido (1D)
+\end_layout
+
+\begin_layout Standard
+Posteriormente as suposições básicas, o assunto é introduzido da maneira
+ convencional, descrevendo a equação fluxo e a equação de Buckley-Leverett.
+ Por ser unidimensional, sua aplicação direta, no cálculo da recuperação
+ de óleo, ficaria restrita à distribuição da saturação de água uniforme
+ em relação ao comprimento.
+ Mediante ao fato de que há uma distribuição de saturação não uniforme,
+ utilizou-se o modelo de Corey-Brooks para permeabilidades relativas, que
+ são funções da saturação de água e foi obtida uma solução para o problema
+ de Riemann e de Goursat-Riemann para uso em conjunto com a teoria de Buckley-Le
+verett(DAKE,1978).
+\end_layout
+
+\begin_layout Itemize
+Equação de Buckey Leverett
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{equation}
+\phi\frac{\partial(S_{j})}{\partial t}+\frac{\partial(u_{jx})}{\partial x}=0\label{eq:Equação de Buckey Leveret-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Lei de Darcy
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u_{\pi}=-k\frac{k_{r\pi}}{\mu_{\pi}}\left(\frac{\partial P_{\pi}}{\partial x}-\rho_{\pi}gsen\alpha\right)\label{eq:Lei de Darcy}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Velocidade de deslocamento do óleo
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+u_{o}=-k\frac{k_{ro}}{\mu_{o}}\left(\frac{\partial P_{o}}{\partial x}-\rho_{o}gsen\alpha\right)\label{eq:velocidade do oleo}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Velocidade de deslocamento da água
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{equation}
+u_{w}=-k\frac{k_{rw}}{\mu_{w}}\left(\frac{\partial P_{w}}{\partial x}-\rho_{w}gsen\alpha\right)\label{eq:velocidade da água}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Função Fluxo
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{equation}
+u_{t}=-k\frac{k_{rw}}{\mu_{w}}\left(\frac{\partial P_{w}}{\partial x}-\rho_{w}gsen\alpha\right)-k\frac{k_{ro}}{\mu_{o}}\left(\frac{\partial P_{o}}{\partial x}-\rho_{o}gsen\alpha\right)\label{Velocidade total}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Pressão Capilar
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P_{c}=P_{o}-P_{w}\label{eq:Pressão capilar}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Derivada da Função Fluxo
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\begin{equation}
+\frac{du_{w}}{dS_{w}}=u_{t}\frac{d}{dS_{w}}\left(\frac{\lambda_{w}}{\lambda_{t}}\right)+gsen\alpha\left(\rho_{w}-\rho_{o}\right)\frac{d}{dS_{w}}\left(\frac{\lambda_{w}\lambda_{o}}{\lambda_{t}}\right)+\frac{d}{dS_{w}}\left(\frac{\lambda_{w}\lambda_{o}}{\lambda_{t}}\frac{\partial P_{c}}{\partial x}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Modelo de Fluxo Bifásido Areal (2D)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Método aproximado de Deppe para análise da injetividade relativa contra
+ o avanço da frente de injeção: 
+\end_layout
+
+\begin_layout Standard
+Em um projeto de injeção de água é necessário o conhecimento dos valores,
+ pelo menos aproximados, das vazões e das pressões de injeção.
+ Valores muito altos de pressões de injeção podem acarretar fraturas na
+ formação e prejudicar seriamente o deslocamento do óleo pela água.
+ Por outro lado, é necessária uma boa injetividade para se obter uma boa
+ produtividade.
+ Os valores de vazão e de pressão de injeção são necessários também para
+ o dimensionamento dos equipamentos de superfície a serem utilizados no
+ projeto de injeção (ROSA ET AL., 2006).
+\end_layout
+
+\begin_layout Standard
+Quando se estuda a distribuição de pressão no meio poroso (dentro de uma
+ determinada malha), observa-se que uma grande parcela da queda de pressão
+ entre os poços de injeção e de produção ocorre exatamente nas proximidades
+ dos poços, onde o fluxo comporta-se como sendo radial.
+ Em alguma região entre os poços o fluxo é aproximadamente linear, de modo
+ que a injetividade na malha deve ser calculada fazendo-se a combinação
+ dos fluxos que ocorrem na malha.
+ Diversos estudos foram feitos, principalmente por Deppe J.
+ (1961) e Muskat (1946), sobre injetividade para os vários tipos de geometria
+ de injeção, entre os quais podem ser destacadas as equações para os modelos
+ de linha direta, linha esconsa, “five-spot”, “seven-spot” e “nine-spot”
+ invertido.
+ Essas equações foram deduzidas admitindo-se razão de mobilidades igual
+ a 1, saturação de gás inicial igual a zero e regime permanente.
+\end_layout
+
+\begin_layout Standard
+Quando as mobilidades de fluido nas regiões varridas e não-varridas são
+ iguais, a injetividade não mudará conforme a frente de inundação avança.
+ Para padrões regulares, pode ser calculado por fórmulas matemáticas.
+\end_layout
+
+\begin_layout Standard
+Quando as mobilidades de fluido nas regiões varridas e não-varridas não
+ são iguais, a injetividade aumentará ou diminuirá conforme a frente de
+ inundação avança.
+ Nesse caso, a injetividade não foi calculada por métodos analíticos para
+ nenhum padrão prático de poço e, além disso, os resultados do modelo em
+ escala e analógico foram publicados apenas para o padrão de cinco pontos
+ (DEPPE J.,1961).
+\end_layout
+
+\begin_layout Standard
+O objetivo é apresentar um método aproximado de cálculo da injetividade
+ para o caso de mobilidades desiguais sendo aplicado a padrões regulares.
+ Antes que o método aproximado de Deppe J.
+ seja discutido, as fórmulas analíticas para mobilidades iguais serão resumidas,
+ e a solução analítica para fluxo radial com mobilidades diferentes será
+ usada para mostrar como a injetividade muda conforme a injeção avança.
+\end_layout
+
+\begin_layout Standard
+Considere um sistema radial com um poço de injeção central de raio 
+\begin_inset Formula $r_{w}$
+\end_inset
+
+ e imagine que o fluido é produzido uniformemente a partir de cada ponto
+ em um círculo de raio 
+\begin_inset Formula $r_{e}$
+\end_inset
+
+.
+ Um fluxo puramente radial resultará, e a frente entre os fluidos injetados
+ e originais será um círculo cujo raio será denominado 
+\begin_inset Formula $r_{f}$
+\end_inset
+
+ como mostram as Figuras 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:4.1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sistema-radial-em"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcos Chaiben/Documents/GitHub/Projeto-Software-Engenharia-C-_DJM/imagens/fig11.png
+	scale 75
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sistema radial em poços de injeção (Adaptado de ROSA ET AL., 2006).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:4.1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcos Chaiben/Documents/GitHub/Projeto-Software-Engenharia-C-_DJM/imagens/fig12.png
+	scale 75
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sistema radial em poços de injeção
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sistema-radial-em"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Partido na equação da Lei de Darcy, e fazendo substituições para adequar-se
+ ao esquema mostrado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:4.1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ encontramos a formulação para a injetividade ( Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:4.5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).Na maioria das aplicações, é conveniente expressar a variação da injetividade
+ como o progresso da frente em termos da injetividade inicial.
+ Neste caso, isto é, uma injetividade relativa 
+\begin_inset Formula $q_{ir}$
+\end_inset
+
+, é definida como a razão da injetividade em qualquer momento
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{inj}=\frac{C_{1}h\lambda_{o}\triangle P}{log\left(\frac{rf}{rw}\right)\frac{1}{M}+log\left(\frac{re}{rf}\right)},\label{eq:4.5}
+\end{equation}
+
+\end_inset
+
+onde 
+\begin_inset Formula $\triangle P=P_{e}-P_{w}$
+\end_inset
+
+ e 
+\begin_inset Formula $M=\frac{\lambda_{d}}{\lambda_{o}}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+Na maioria das aplicações, é conveniente expressar a variação da injetividade
+ como o progresso da frente em termos da injetividade inicial.
+ Neste caso, isto é, uma injetividade relativa 
+\begin_inset Formula $q_{ir}$
+\end_inset
+
+, é definida como a razão da injetividade em qualquer momento,dada pela
+ Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:4.5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, pela a injetividade inicial, dada pela Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:4.5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+com 
+\begin_inset Formula $r_{f}=r_{w.}$
+\end_inset
+
+, (DEPPE J.,1961).Fazendo a injetividade inicial (
+\begin_inset Formula $q_{inj,i})$
+\end_inset
+
+, temos:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{inj,i}=\frac{C_{1}h\lambda_{o}\triangle(A_{inv})_{BT},P}{log\left(\frac{re}{rf}\right)}.\label{eq:4.6}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Então, a razão entre a Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:4.5"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ e Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:4.6"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, resulta :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{ir}=\frac{log\left(\frac{re}{rf}\right)}{log\left(\frac{rf}{rw}\right)\frac{1}{M}+log\left(\frac{re}{rf}\right)}\label{eq:4.7}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A equação da injetividade relativa calculada através do método aproximado
+ de Deppe (Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:4.7"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) será um dos cálculos realizados pelo Software na análise do comportamento
+ areal.
+ A injetividade relativa começa unitária quando 
+\begin_inset Formula $r_{f}=r_{w}$
+\end_inset
+
+ e termina quando 
+\begin_inset Formula $r_{f}=r_{e}$
+\end_inset
+
+ (correspondente à varredura completa da área e mudança completa da mobilidade
+ do fluido de 
+\begin_inset Formula $\lambda_{o}$
+\end_inset
+
+ para 
+\begin_inset Formula $\lambda_{d}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+As curvas calculadas a partir desta equação serão traçadas pelo software
+ gnuplot para quaise razões de mobilidade.
+ A injetividade relativa é plotada contra a fração da área varrida 
+\begin_inset Formula $E_{A}$
+\end_inset
+
+, ao invés de contra a posição da frente de avanço.
+ Nesse caso, a relação é 
+\begin_inset Formula $\frac{r_{f}^{2}}{r_{e}^{2}}=E_{A}$
+\end_inset
+
+ para 
+\begin_inset Formula $r_{w}\ll r_{e}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Determinação analítica da área de varrido e do comportamento das linhas
+ de fluxo
+\end_layout
+
+\begin_layout Standard
+Conforme mostrado por Brigham (1981), em algumas situações particulares
+ é possível a determinação analítica da área de varrido, da distribuição
+ de pressão e do comportamento das linhas de fluxo em um reservatório sujeito
+ à injeção de água.
+ Dentre essas situações pode-se considerar o caso de um reservatório de
+ óleo subsaturado, homogêneo e horizontal, sujeito à injeção de água, onde
+ a razão de mobilidades seja unitária.
+ Em outras situações mais complexas, a solução obtida com essas hipóteses
+ simplificadoras fornecerá uma idéia do comportamento real.
+\end_layout
+
+\begin_layout Standard
+Considere, por exemplo, o caso de dois poços, sendo um deles injetor de
+ água, com vazão 
+\begin_inset Formula $q_{1}$
+\end_inset
+
+, e o outro produtor de óleo, com vazão 
+\begin_inset Formula $q_{2}$
+\end_inset
+
+, localizados em um reservatório muito extenso, conforme mostrado na Figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sistema-composto-de"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ O reservatório é homogêneo e horizontal, e a razão entre as mobilidades
+ da água e do óleo é unitária.
+ Admita que a espessura do reservatório seja pequena, de modo que o fluxo
+ possa ser considerado como sendo praticamente horizontal.
+ Admita ainda que as vazões sejam medidas em condições de reservatório e
+ que os valores absolutos das vazões de injeção e de produção sejam iguais
+ a q, sendo q > 0.
+ Como normalmente convenciona-se que a vazão de produção é positiva, então
+ 
+\begin_inset Formula $q_{2}=q$
+\end_inset
+
+ e 
+\begin_inset Formula $q_{1}=-q_{2}=-q$
+\end_inset
+
+ (ROSA ET AL., 2006).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcos Chaiben/Documents/GitHub/Projeto-Software-Engenharia-C-_DJM/imagens/fig18.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sistema composto de um poço injetor e de um produtor (ROSA ET AL., 2006).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sistema-composto-de"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Utilizando a aproximação logarítmica para representar a solução do modelo
+ da fonte linear, a queda de pressão adimensional em um ponto qualquer de
+ um reservatório infinito, devida à produção de um poço com vazão q, é dada,
+ empregando- se um sistema compatível de unidades, pela expressão:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+p_{D}(r_{D},t_{D})\equiv\frac{2\pi kh[p_{i}-p(r,t)]}{q\mu}=\frac{1}{2}[ln(t_{D}/r_{D}^{2})+0,80907]\label{eq:QUEDA-DE-PRESSAO}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para facilitar o entendimento da aplicação desse princípio, considere a
+ Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sistemas-de-coordenadas"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, onde está representado um sistema de coordenadas cartesianas para as três
+ situações em que o programa irá fazer os cálculos, sendo C a metade da
+ distância entre os dois poços, (x,y) um ponto qualquer do sistema, 
+\begin_inset Formula $r_{1},r_{2}$
+\end_inset
+
+e 
+\begin_inset Formula $r_{3}$
+\end_inset
+
+ a distância entre os poços e o ponto (x,y).
+ Após substituir as distâncias na Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:QUEDA-DE-PRESSAO"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ e fazer as manipulações matemáticas necessárias, as Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:p1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:p2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:p3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ permitem calcular a pressão em qualquer ponto do reservatório, em um tempo
+ qualquer t.
+ O Software desenvolvido irá calcular o valor das pressões para um ponto
+ (x,y) qualquer escolhido pelo usuário.
+\end_layout
+
+\begin_layout Standard
+Conforme se observa, usando a aproximação de longo tempo (aproximação logarítmic
+a da solução do modelo da fonte linear) para o comportamento transiente
+ de pressão, Eq.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:QUEDA-DE-PRESSAO"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, e aplicando o princípio da superposição de efeitos, obteve-se uma solução
+ para fluxo permanente, já que não há dependência do tempo no lado direito
+ da equação.
+ Isso ocorre porque os poços injetor e produtor têm a mesma vazão, gerando
+ então no reservatório um estado permanente de fluxo, ou seja, a pressão
+ no reservatório é uma função somente da posição (ROSA ET AL., 2006).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcos Chaiben/Documents/GitHub/Projeto-Software-Engenharia-C-_DJM/imagens/fig19.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sistema composto de um poço produtor e um injetores, em um sistema de coordenada
+s cartesianas.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sistema-composto2inj-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcos Chaiben/Documents/GitHub/Projeto-Software-Engenharia-C-_DJM/imagens/fig47.png
+	scale 75
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sistema composto de um poço produtor e de dois injetores, em um sistema
+ de coordenadas cartesianas.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sistema-composto2inj"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcos Chaiben/Documents/GitHub/Projeto-Software-Engenharia-C-_DJM/imagens/fig50.png
+	scale 75
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sistema composto de um poço injetor e de dois produtores, em um sistema
+ de coordenadas cartesianas.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sistema-composto-de-2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sistemas de coordenadas cartesianas.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sistemas-de-coordenadas"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uma maneira de se analisar o comportamento da pressão (e consequentemente
+ das linhas de fluxo) nos sistemas mostrados na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sistema-composto-de-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ é verificar a forma geométrica das linhas de pressão constante, ou seja,
+ das linhas de mesmo potencial (equipotenciais), já que neste caso o potencial
+ de fluxo e a pressão do fluido são iguais, pois o fluxo é horizontal.
+ Para se analisar o comportamento das linhas equipotenciais basta admitir
+ que o lado direito das Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:p1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:p2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:p3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ sejam constantes, isto é, considerar a situação em que o quociente entre
+ as distâncias 
+\begin_inset Formula $r_{2}$
+\end_inset
+
+ , 
+\begin_inset Formula $r_{1}$
+\end_inset
+
+e 
+\begin_inset Formula $r_{3}$
+\end_inset
+
+ seja constante (ROSA ET AL., 2006).
+ Com isso, após algumas manipulações, obtem-se as Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:linha1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq: linha2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:linha3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, que sarão origem a gráficos mostrando o comportamento dessas linhas de
+ pressão consntante ao redor dos poços de injeção e produção.
+\end_layout
+
+\begin_layout Standard
+Um outro aspecto de interesse é a determinação da área varrida pelo fluido
+ injetado até um determinado instante.
+ Por exemplo, no caso do esquema da Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sistema-composto-de-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, onde são mostradas as dimensões do sistema, é interessante saber qual
+ seria a área invadida pela água no momento que a água atingisse o poço
+ produtor (
+\begin_inset Quotes eld
+\end_inset
+
+breakthrough
+\begin_inset Quotes erd
+\end_inset
+
+) e, nesse instante, qual seria a distância percorrida pela água no sentido
+ oposto ao do poço produtor.
+ Para facilitar o desenvolvimento a ser apresentado, admita novamente um
+ sistema de coordenadas cartesianas, em que o eixo horizontal coincide com
+ a linha horizontal que passa pelos dois poços, como ilustrado na Figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sistema-composto-de-1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ Para se analisar o comportamento do sistema no instante do “breakthrough”,
+ é conveniente admitir também que o eixo horizontal tem origem no poço injetor,
+ com valores de x crescentes para a direita neste caso, já que o poço injetor
+ encontra-se à esquerda do produtor (ROSA ET AL., 2006).
+ Com isso, obtém-se o valor da área invadida no instante do 
+\begin_inset Quotes eld
+\end_inset
+
+breakthrogh
+\begin_inset Quotes erd
+\end_inset
+
+ ( Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:14.19"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) , 
+\begin_inset Formula $(A_{inv})_{BT},$
+\end_inset
+
+pode ser calculado pelas Eqs.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:area1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:area2"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:area3"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, que serão também dados de saída do programa.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align right
+\begin_inset Graphics
+	filename ../../../../Desktop/UENF/8º Periodo/Hidrodinânica/Trabalho AARE HIdro/lyx/08-resultados-documentofinal-ic-msc-dsc/fig24.png
+	scale 35
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sistema composto de dois poços: injetor e produtor (ROSA ET AL., 2006).
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sistema-composto-de-1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcos Chaiben/Documents/GitHub/Projeto-Software-Engenharia-C-_DJM/imagens/fig25.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ilustração da área invadida pela água no instante de “breakthrough” em um
+ sistema composto de um injetor e de um produtor (ROSA ET AL., 2006)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:14.19"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Caso 1 : 
+\begin_inset Formula 
+\begin{equation}
+\frac{2\pi kh[p(x,y,t)-p_{i}]}{q\mu}=ln(r_{2}/r_{1}),\label{eq:p1}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+x^{4}+y^{4}+2x^{2}y^{2}+x^{2}R"-y^{2}R"=\frac{C^{2}R"}{2},\label{eq:linha1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(A_{inv})_{BT}=\frac{\pi C^{2}}{2}.\label{eq:area1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Caso 2 : 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{2\pi kh[p_{i}-p(x,y,t)]}{\mu q}=ln\left(\frac{r_{3}^{4}}{r_{1}^{2}r_{2}^{2}}\right)^{\frac{1}{4}},\label{eq:p2}
+\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{equation}
+(x^{2}+y^{2})^{2}+(y^{2}-x^{2})R'=-\frac{C^{2}R'}{2},\label{eq: linha2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Transformando em coordenadas polares, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+r^{4}+r^{2}\left[(-cos(2\theta)\right]R'=-\frac{C^{2}R'}{2},\label{eq:POLAR}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(A_{inv})_{BT}=2\pi C^{2}\label{eq:area2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Caso 3 :
+\begin_inset Formula 
+\begin{equation}
+\frac{2\pi kh[p_{i}-p(x,y,t)]}{\mu q}=ln\left(\frac{r_{1}^{2}r_{2}^{2}}{r_{3}^{4}}\right)^{\frac{1}{4}}.\label{eq:p3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x^{4}+y^{4}+2x^{2}y^{2}+x^{2}R"-y^{2}R"=\frac{C^{2}R"}{2}.\label{eq:linha3}
+\end{equation}
+
+\end_inset
+
+Transformando em coordenadas polares, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+r^{4}-r^{2}\left[(sen^{2}(\theta)-cos^{2}(\theta)\right]R"=\frac{C^{2}R"}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(A_{inv})_{BT}=2\pi C^{2}\label{eq:area3}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+onde, 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ensuremath{R=\frac{r_{3}^{4}}{r_{1}^{2}r_{2}^{2}}.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R'=\frac{2RC^{2}}{R-1}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+R''=\frac{2C^{2}}{R^{-1}-1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Modelo de Fluxo Bifásido em Sistemas Estratificados (3D)
+\end_layout
+
+\begin_layout Standard
+Dada uma perspectiva particular de injeção num reservatório heterogêneo
+ (Figura ..........................), pretende-se prever informações como o tempo necessário para
+ o “breakthrough”, recuperação de óleo no “breakthrough”, tempo de produção,
+ desempenho de produção de óleo com a injeção de água, etc.
+ Vários métodos foram propostos para fazer isso, cada um diferindo na maneira
+ de lidar com a heterogeneidade, cálculos de varredura, desempenho de injeção
+ de água, eficiência do deslocamento e muitas outras variáveis que podem
+ afetar a desempenho de injeção (SMITH; COBB, 1997).
+ Como dito na especificação, será analisada a previsão de desempenho num
+ reservatório com múltiplas camadas, com base nos métodos de Stiles (1949)
+ e Dykstra-Parsons(1950), as formulações para tal são definidas a seguir:
+ 
+\end_layout
+
+\begin_layout Standard
+Considerando o Método de Stiles, temos que:
+\end_layout
+
+\begin_layout Itemize
+Posição da frante de avanço da água numa cada i qualquer (i > j):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+X_{i}=X_{j}\left(\frac{k_{i}}{k_{j}}\right)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Vazão de injeção numa camada j:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+q_{j}=q_{w}=q_{o}=\frac{k_{w}A_{j}\triangle p}{\mu_{w}L}=\frac{k_{o}A_{j}\triangle p}{\mu_{o}L}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Volume de óleo produzido por camada em condições padrão: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+N_{pi}=\frac{V_{pi}(1-S_{w}-S_{or})}{Bo}=\frac{WX_{i}h_{i}\phi(1-S_{w}-S_{or})}{Bo}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Volume de óleo produzido em toda a malha em condições padrão:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+N_{p}=\frac{V_{p}(1-S_{w}-S_{or})}{Bo}E_{v}=\frac{WLh_{t}\phi(1-S_{w}-S_{or})}{Bo}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considerando o Método de Dykstra-Parsons, temos que:
+\end_layout
+
+\begin_layout Itemize
+Posição da frante de avanço da água numa cada i qualquer (i > j):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+X_{i}=L\left[\frac{M-\sqrt{M^{2}+(1-M^{2})\frac{k_{i}}{k_{j}}}}{M-1}\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A eficiência do varrido vertical é definida matematicamente como: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E_{v}=\frac{\stackrel[i=l]{n}{\sum}X_{i}h_{i}}{Lh_{t}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+A vazão de injeção em cada camada como sendo dependente da razão de mobilidade
+ M e posição X:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(Q_{inj})_{i}=\frac{k_{i}k_{rw}A\triangle p}{B_{w}\mu_{w}[X_{i}+M(L-X_{i})]}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Volume de óleo produzido por camada em condições padrão: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+N_{pi}=\frac{V_{pi}(1-S_{w}-S_{or})}{Bo}=\frac{WX_{i}h_{i}\phi(1-S_{w}-S_{or})}{Bo}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Volume de óleo produzido em toda a malha em condições padrão:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+N_{p}=\frac{V_{p}(1-S_{w}-S_{or})}{Bo}E_{v}=\frac{WLh_{t}\phi(1-S_{w}-S_{or})}{Bo}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Reservatório Estratificado (cu)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Diagrama de Pacotes – assuntos
+\end_layout
+
+\begin_layout Standard
+Com base na análise do domínio do software desenvolvivo, foram identificadps
+ ps seguintes pacotes: 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Propriedades da Rocha e dos fluidos:
+\series default
+ é um pacote que possui os dados das propriedades da rocha e dos fuidos,
+ que compõem o meio poroso.
+ Sua função é fornecer estas propriedades para o modelo de recuperação;
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Métodos de Deslocamento Imiscivel 1D, 2D e 3D: 
+\series default
+é um pacote que contém diferentes métodos de deslocamentos por fluidos imiscívei
+s;
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Recuperação Secundária: 
+\series default
+é um pacote que envolve a injeção de água como método de recuperação;
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Gnuplot: 
+\series default
+envolve um utilitário de criação de gráficos orientado por linha de comando
+ multi-plataforma;
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Engenharia de Reservatório: 
+\series default
+é um ramo da engenharia que fornece um estudo específico para fluxo em meios
+ porosos em rochas reservatório.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Marcos Chaiben/iCloudDrive/9º Periodo/Programação Prática C++/Diagrama de pacotes.png
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Diagrama de Pacotes
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Diagrama-de-Pacotes"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
